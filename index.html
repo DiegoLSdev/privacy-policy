@@ -1,70 +1,79 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Política de privacidad de [Tu Aplicación]. Explicamos cómo manejamos tus datos de manera segura.">
-    <title>Política de Privacidad</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            margin: 0;
-            padding: 0;
-        }
-        header {
-            background-color: #00796b;
-            color: #fff;
-            padding: 20px;
-            text-align: center;
-        }
-        main {
-            max-width: 800px;
-            margin: 20px auto;
-            padding: 20px;
-        }
-        h1, h2 {
-            color: #00796b;
-        }
-        footer {
-            text-align: center;
-            margin-top: 20px;
-            padding: 10px;
-            background-color: #f4f4f4;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Política de Privacidad / Privacy Policy</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+    .container {
+      width: 80%;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    h1, h2 {
+      color: #4CAF50;
+    }
+    p {
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+    .lang-button {
+      padding: 10px 15px;
+      margin-top: 20px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    .lang-button:hover {
+      background-color: #45a049;
+    }
+    .hidden {
+      display: none;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>Política de Privacidad</h1>
-    </header>
-    <main>
-        <p>Última actualización: [Fecha Actual]</p>
-        <h2>Introducción</h2>
-        <p>En <strong>[Tu Aplicación]</strong>, valoramos tu privacidad y nos comprometemos a proteger tus datos. Esta política explica cómo manejamos la información que recopilamos de los usuarios.</p>
 
-        <h2>Datos que recopilamos</h2>
-        <p>No recopilamos datos personales como nombres, correos electrónicos o ubicaciones.</p>
-        <p>No recopilamos datos no personales como estadísticas de uso o información del dispositivo.</p>
+  <div class="container">
+    <h1>Política de Privacidad / Privacy Policy</h1>
+    
+    <!-- Botones para cambiar de idioma -->
+    <button class="lang-button" onclick="showSpanish()">Español</button>
+    <button class="lang-button" onclick="showEnglish()">English</button>
 
-        <h2>Cómo usamos la información</h2>
-        <p>No utilizamos ni compartimos información de ningún tipo, ya que no recopilamos datos.</p>
+    <!-- Versión en Español -->
+    <div id="spanish" class="lang-content">
+      <h2>Política de Privacidad</h2>
+      <p>Tu privacidad es importante para nosotros. No recopilamos información personal como nombres, correos electrónicos o ubicaciones...</p>
+    </div>
 
-        <h2>Compartir información</h2>
-        <p>No compartimos datos con terceros ni proveedores de servicios.</p>
+    <!-- Versión en Inglés -->
+    <div id="english" class="lang-content hidden">
+      <h2>Privacy Policy</h2>
+      <p>Your privacy is important to us. We do not collect personal information like names, emails, or locations...</p>
+    </div>
+  </div>
 
-        <h2>Seguridad</h2>
-        <p>No recopilamos información, pero mantenemos altos estándares de seguridad para proteger cualquier interacción dentro de la aplicación.</p>
+  <script>
+    function showSpanish() {
+      document.getElementById("spanish").classList.remove("hidden");
+      document.getElementById("english").classList.add("hidden");
+    }
 
-        <h2>Cambios en esta política</h2>
-        <p>Nos reservamos el derecho de actualizar esta política. Recomendamos revisar esta página periódicamente para estar informado.</p>
-
-        <h2>Contacto</h2>
-        <p>Si tienes alguna pregunta sobre esta política, puedes contactarnos en: <strong>[correo@ejemplo.com]</strong>.</p>
-    </main>
-    <footer>
-        <p>&copy; [Tu Aplicación]. Todos los derechos reservados.</p>
-    </footer>
+    function showEnglish() {
+      document.getElementById("english").classList.remove("hidden");
+      document.getElementById("spanish").classList.add("hidden");
+    }
+  </script>
 </body>
 </html>
